@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /nh_seo/
+Disallow: /nh_seo/config/
+Disallow: /nh_seo/includes/
+Disallow: /nh_seo/offline.php
+Disallow: /nh_seo/anfrage-erfolgreich.php
+Disallow: /nh_seo/kontakt-senden.php
+Disallow: /nh_seo/storage/
+Disallow: /nh_seo/errors/
+Sitemap: https://easyit-leipzig.de/sitemap.xml
