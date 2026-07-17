@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /config/
+Disallow: /includes/
+Disallow: /offline.php
+Disallow: /errors/
+Sitemap: https://easyit-leipzig.de/sitemap.xml

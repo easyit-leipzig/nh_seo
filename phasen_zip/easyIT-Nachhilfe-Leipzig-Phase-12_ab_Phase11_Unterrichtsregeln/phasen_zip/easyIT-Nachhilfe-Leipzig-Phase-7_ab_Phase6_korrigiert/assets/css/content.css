@@ -1,0 +1,155 @@
+.breadcrumbs{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem;color:#e9f6ff;font-size:.9rem}
+.breadcrumbs a{text-decoration:none}
+.hero{
+  position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:2rem;align-items:center;
+  min-height:520px;padding:clamp(28px,5vw,70px);border-radius:var(--radius);background:linear-gradient(145deg,#fff,#f4faff);box-shadow:var(--shadow)
+}
+.hero::after{content:"";position:absolute;right:-80px;top:-90px;width:300px;height:300px;border-radius:50%;background:rgba(0,87,164,.08)}
+.eyebrow{display:inline-block;margin-bottom:.8rem;color:var(--blue);font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.hero h1{margin:.2rem 0 1rem;font-size:clamp(2.5rem,5vw,5.7rem);color:var(--blue-dark)}
+.hero p{font-size:clamp(1.05rem,1.5vw,1.3rem);color:var(--muted)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem}
+.hero-panel{position:relative;z-index:1;padding:1.5rem;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow)}
+.hero-panel h2{color:var(--blue)}
+.hero-panel ul{padding-left:1.2rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.stat{padding:1rem;border-radius:14px;background:var(--surface-soft);text-align:center}
+.stat strong{display:block;font-size:1.35rem;color:var(--blue)}
+.section{margin-top:clamp(42px,7vw,90px);padding:clamp(25px,4vw,54px);border-radius:var(--radius);background:#fff;box-shadow:var(--shadow)}
+.section-heading{display:flex;justify-content:space-between;gap:2rem;align-items:end;margin-bottom:1.6rem}
+.section-heading h2{margin:0;color:var(--blue-dark);font-size:clamp(1.8rem,3vw,3rem)}
+.section-heading p{margin:0;color:var(--muted)}
+.card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.card{padding:1.35rem;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#fff,#f8fbfd);transition:.2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card h3{color:var(--blue);margin-top:0}
+.card a{color:var(--blue);font-weight:800;text-decoration:none}
+.faq details{padding:1rem 0;border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:800;color:var(--blue-dark)}
+.cta{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;color:#fff;background:linear-gradient(135deg,var(--blue-dark),var(--blue))}
+.cta h2{color:#fff}
+@media(max-width:1150px){.card-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:850px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .section-heading{display:block}
+  .card-grid,.stats{grid-template-columns:1fr}
+  .cta{grid-template-columns:1fr}
+}
+
+
+/* Phase 2: Inhaltsseiten */
+.prose{max-width:920px}
+.prose h2{margin-top:2.2rem;color:var(--blue-dark);font-size:clamp(1.55rem,2.5vw,2.35rem)}
+.prose h3{margin-top:1.5rem;color:var(--blue)}
+.prose p,.prose li{color:#334f69}
+.lead{font-size:clamp(1.08rem,1.6vw,1.3rem);color:var(--muted)}
+.content-hero{padding:clamp(28px,5vw,65px);border-radius:var(--radius);background:linear-gradient(145deg,#fff,#f2f9ff);box-shadow:var(--shadow)}
+.content-hero h1{margin:.25rem 0 1rem;font-size:clamp(2.25rem,4.6vw,4.8rem);color:var(--blue-dark)}
+.content-hero .lead{max-width:850px}
+.icon-list{display:grid;gap:.9rem;padding:0;list-style:none}
+.icon-list li{position:relative;padding-left:2rem}
+.icon-list li::before{content:'✓';position:absolute;left:0;top:.05rem;width:1.35rem;height:1.35rem;display:grid;place-items:center;border-radius:50%;background:var(--blue);color:#fff;font-size:.8rem;font-weight:900}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);gap:clamp(1.5rem,4vw,4rem);align-items:start}
+.info-box{padding:1.4rem;border-left:5px solid var(--gold);border-radius:0 16px 16px 0;background:#f7fbff}
+.quote-card{position:relative;padding:1.5rem;border:1px solid var(--line);border-radius:18px;background:#fff}
+.quote-card::before{content:'“';position:absolute;right:1rem;top:-.4rem;font-size:5rem;line-height:1;color:rgba(0,87,164,.10);font-family:Georgia,serif}
+.quote-card blockquote{margin:0;font-size:1.08rem;color:#294760}
+.quote-card cite{display:block;margin-top:1rem;color:var(--muted);font-style:normal;font-weight:700}
+.steps{counter-reset:step;display:grid;gap:1rem}
+.step{counter-increment:step;display:grid;grid-template-columns:52px 1fr;gap:1rem;padding:1.2rem;border:1px solid var(--line);border-radius:18px;background:#fff}
+.step::before{content:counter(step);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--blue);color:#fff;font-size:1.2rem;font-weight:900}
+.step h3{margin:.15rem 0 .4rem;color:var(--blue-dark)}
+.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.price-card{padding:1.5rem;border:1px solid var(--line);border-radius:20px;background:#fff}
+.price-card.featured{border:2px solid var(--gold);box-shadow:0 0 30px rgba(242,182,0,.18)}
+.price-card h2{color:var(--blue-dark)}
+.price{font-size:2rem;font-weight:900;color:var(--blue)}
+.badge{display:inline-flex;padding:.28rem .65rem;border-radius:999px;background:rgba(242,182,0,.2);color:#644c00;font-size:.8rem;font-weight:900}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:1.5rem}
+.contact-form{display:grid;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{display:grid;gap:.4rem}
+.field label{font-weight:800;color:var(--blue-dark)}
+.field input,.field select,.field textarea{width:100%;padding:.82rem .9rem;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--text)}
+.field textarea{min-height:160px;resize:vertical}
+.notice{padding:1rem;border-radius:14px;background:#eff8ff;border:1px solid var(--line)}
+.notice--success{background:#edfbee;border-color:#87ce91}
+.notice--error{background:#fff1f1;border-color:#e4a0a0}
+.job-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.job-card{padding:1.4rem;border:1px solid var(--line);border-radius:18px;background:#fff}
+.job-card h2{font-size:1.3rem;color:var(--blue-dark)}
+.tag-list{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;list-style:none}
+.tag-list li{padding:.35rem .7rem;border-radius:999px;background:#edf6fc;color:var(--blue-dark);font-size:.86rem;font-weight:750}
+.link-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;padding:0;list-style:none}
+.link-list a{display:block;padding:.85rem 1rem;border:1px solid var(--line);border-radius:12px;text-decoration:none;font-weight:800;color:var(--blue)}
+@media(max-width:1000px){.price-grid,.job-grid{grid-template-columns:1fr 1fr}.split,.contact-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.price-grid,.job-grid,.form-row,.link-list{grid-template-columns:1fr}.step{grid-template-columns:44px 1fr}.step::before{width:44px;height:44px}}
+
+.subject-symbol{text-align:center}
+.subject-symbol>strong{display:grid;place-items:center;width:130px;aspect-ratio:1;margin:0 auto 1rem;border-radius:50%;font-size:clamp(2rem,5vw,4rem);color:var(--gold);background:var(--blue-dark);box-shadow:0 0 35px rgba(76,217,255,.24)}
+.topic-list{display:flex;flex-wrap:wrap;gap:.75rem}
+.topic-chip{padding:.72rem 1rem;border:1px solid var(--line);border-radius:999px;background:var(--surface-soft);font-weight:750;color:var(--blue-dark)}
+.card-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:.85rem;padding:0;list-style:none}
+.steps li{display:grid;gap:.65rem;padding:1rem;border:1px solid var(--line);border-radius:16px;background:var(--surface-soft)}
+.steps li span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-weight:900}
+.split-section{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:2rem}
+.check-panel{padding:1.35rem;border-radius:18px;background:var(--blue-dark);color:#fff}
+.check-panel h3{color:var(--gold)}
+.check-panel li{margin:.45rem 0}
+.text-link{color:var(--blue);font-weight:850;text-decoration:none}
+.mini-link-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+.mini-link-grid a{display:flex;align-items:center;gap:.7rem;padding:.85rem 1rem;border:1px solid var(--line);border-radius:14px;text-decoration:none;background:var(--surface-soft)}
+.mini-link-grid a span{color:var(--blue);font-weight:900}
+.mini-link-grid a:hover{border-color:var(--blue)}
+.subject-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.subject-card__icon{display:grid;place-items:center;width:54px;height:54px;border-radius:15px;background:var(--blue-dark);color:var(--gold);font-weight:900;font-size:1.2rem}
+.subject-card p{font-size:.96rem}
+@media(max-width:1100px){.steps{grid-template-columns:repeat(3,1fr)}.mini-link-grid{grid-template-columns:repeat(3,1fr)}.subject-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.card-grid--3,.steps,.split-section,.mini-link-grid,.subject-grid{grid-template-columns:1fr}}
+
+
+/* Phase 4: Local SEO und Schulformen */
+.local-hero .hero-panel{background:linear-gradient(145deg,#fff,#eef8ff)}
+.local-pin{display:grid;place-items:center;width:72px;height:72px;margin-bottom:1rem;border-radius:50%;background:var(--blue);color:var(--gold);font-size:2.5rem;font-weight:900;box-shadow:0 0 28px rgba(0,87,164,.25)}
+.local-link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.local-link-grid a{display:flex;justify-content:space-between;gap:1rem;padding:1rem 1.1rem;border:1px solid var(--line);border-radius:14px;background:var(--surface-soft);color:var(--blue-dark);font-weight:800;text-decoration:none;transition:.2s ease}
+.local-link-grid a:hover{transform:translateY(-2px);background:#fff;box-shadow:var(--shadow)}
+.local-link-grid a span{color:var(--blue)}
+.local-link-grid--compact{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1000px){.local-link-grid,.local-link-grid--compact{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.local-link-grid,.local-link-grid--compact{grid-template-columns:1fr}}
+
+
+/* Phase 6: Lernwerkzeuge */
+.tool-hero .hero-panel{background:linear-gradient(145deg,#fff,#eef8ff)}
+.tool-icon,.tool-card__icon{display:grid;place-items:center;width:68px;height:68px;border-radius:18px;background:var(--blue);color:var(--gold);font-size:2rem;font-weight:900}
+.tool-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.tool-card{display:grid;gap:.8rem;padding:1.3rem;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#fff,#f6fbff);text-decoration:none;transition:.2s ease}
+.tool-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.tool-card strong{font-size:1.15rem;color:var(--blue-dark)}
+.tool-card>span:last-child{color:var(--muted)}
+.calculator{max-width:950px;margin:auto}
+.calculator__header{margin-bottom:1.5rem}
+.input-grid,.grade-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.grade-row{grid-template-columns:1fr 1fr auto;align-items:end;margin-bottom:.8rem}
+.calculator label{display:grid;gap:.4rem;font-weight:800;color:var(--blue-dark)}
+.calculator input,.calculator select{width:100%;padding:.8rem .9rem;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--text)}
+.full-label{max-width:440px;margin-bottom:1rem}
+.calculator__actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1rem}
+.remove-row{width:44px;height:44px;border:0;border-radius:12px;background:#fee;color:#9c1230;font-size:1.5rem;font-weight:900;cursor:pointer}
+.calculator__result{display:block;margin-top:1.25rem;padding:1.15rem;border-left:5px solid var(--gold);border-radius:12px;background:var(--surface-soft);font-size:1.2rem;font-weight:900;color:var(--blue-dark)}
+.formula-box{margin-top:1rem;padding:1rem;border:1px solid var(--line);border-radius:12px}
+.formula-box summary{cursor:pointer;font-weight:800}
+.study-plan{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.plan-stat{padding:1rem;border-radius:14px;background:var(--surface-soft);text-align:center}
+.plan-stat strong{display:block;font-size:1.5rem;color:var(--blue)}
+@media(max-width:1000px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.tool-grid,.input-grid,.grade-row,.study-plan{grid-template-columns:1fr}.grade-row{padding-bottom:1rem;border-bottom:1px solid var(--line)}}
+
+
+/* Phase 7: Fehlerseiten */
+.error-page{text-align:center;padding-block:clamp(50px,10vw,120px)}
+.error-code{display:block;font-size:clamp(5rem,15vw,12rem);line-height:.8;font-weight:900;color:rgba(0,87,164,.12)}
+.error-page h1{font-size:clamp(2rem,4vw,4rem);color:var(--blue-dark)}
+.error-page p{margin-inline:auto}
