@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /config/
+Disallow: /includes/
+Sitemap: https://easyit-leipzig.de/sitemap.xml
